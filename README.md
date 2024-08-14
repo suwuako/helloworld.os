@@ -11,3 +11,14 @@
 [MIT kernel class](https://pdos.csail.mit.edu/6.828/2018/labs/lab1/)
 
 [osdev wiki](https://wiki.osdev.org/Expanded_Main_Page)
+
+# Checklist
+## Implemented
+- [ ] Programming environment
+- [ ] bootloader
+- [ ] kernel
+- [ ] enter into user space
+
+## Learning
+- [ ] UNSW 3231 lectures
+- [ ] osdev wiki

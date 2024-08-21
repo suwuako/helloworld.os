@@ -19,6 +19,7 @@
 ## Implemented
 - [ ] Programming environment
 - [ ] bootloader
+    - [x] hello world
 - [ ] kernel
 - [ ] enter into user space
 

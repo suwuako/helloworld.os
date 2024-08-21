@@ -12,6 +12,9 @@
 
 [osdev wiki](https://wiki.osdev.org/Expanded_Main_Page)
 
+# Requirements
+- qemu
+
 # Checklist
 ## Implemented
 - [ ] Programming environment
@@ -22,3 +25,9 @@
 ## Learning
 - [ ] UNSW 3231 lectures
 - [ ] osdev wiki
+- [ ] read about UEFI
+- [ ] read boot sequence
+- [ ] read diskless booting
+- [ ] (optional since we are using bios) read global description table
+- [ ] interrupts
+- [ ] getting keyboard output

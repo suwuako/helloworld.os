@@ -9,6 +9,8 @@
 
 [MIT kernel class](https://pdos.csail.mit.edu/6.828/2018/labs/lab1/)
 
+[OS with grub](https://medium.com/@imvinojanv/build-your-own-operating-system-os-431e7716a1d1)
+
 [osdev wiki](https://wiki.osdev.org/Expanded_Main_Page)
 
 # Requirements
@@ -31,4 +33,3 @@
 - [ ] (optional since we are using bios) read global description table
 - [ ] interrupts
 - [ ] getting keyboard output
->>>>>>> 09e7846573cc2602f34599abc57cc51cef36da3b

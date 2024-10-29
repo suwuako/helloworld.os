@@ -2,3 +2,34 @@
 
 - since we are using bios, we want our compiled binary to start at 0x7c00 and be 512 bytes long, ending with 0xaa55
 - we then want the bootloader to load the kernel
+
+== wtf is a gdt ==
+* gdt (global discriptor tables) is a dats structure that defines characteristics of memory segments
+* we need gdt becuase memory segments exist - if we want to enter protected mode, we need to know the "permissions" of a certain segment (i.e. whos allowed to read this section of memory, whos allowed to modify)
+* GDT style:
+    * GDT needs to contain a description of the data and code segments
+    * Code segment:
+        * we need two things for a code segment - the size the segment and its location in memory.
+        * thus, we have base and limit;
+        * base -> 32 bit property that tells you the location of the segment
+        * limit -> 20 bit property that tells you the size of the segment
+        * present -> 1 bit (1 if segment is used)
+        * privillege -> 2 bit value (from 0-3) as a "segment heirchy" and implements memory protection (ring 0 is highest privillege)
+        * type -> 1 bit (1 if segment is code or data)
+        * flags:
+            * type flags (4 bits):
+                * in the form ____
+                * the first bit is to check if this segment is for code 1___
+                * teh second bit is to check if the code can be executed by lower priv segments \_x__
+                * readable: can this segment be read or only executable
+                * accessed: set to 1 if cpu is using it 
+            * other flags (4 bits):
+                * granularity: when set to 1, the limit is now (limit **= 0x1000) a
+                * 32 bit - checks if theyre in use with 32 bit memory
+                * last two flags arent being used
+            * we can use dw (2 bytes) dd (4 bytes) dq (8 bytes) and db (1 byte) to create out gdt
+* you can have a table, where the address is the GDTR + offset:
+    * GDTR is a register that holds the address to the beginning of the global descriptor table
+    * note that the first item of the GDT is always NULL
+    * each segment descriptor is 8 bytes long
+    * 

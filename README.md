@@ -1,6 +1,10 @@
 # helloworld.os
 *A* convoluted way to print hello world
 
+## ruh roh its depreciated becuase i decided to work on an actual OS project
+
+https://github.com/LeBron-James-Fan-Club/Penjamin see here ^^
+
 # Resources I used
 [Write your own OS in an hour](https://www.youtube.com/watch?v=1rnA6wpF0o4&list=PLHh55M_Kq4OApWScZyPl5HhgsTJS9MZ6M&index=2)
 [low byte prod's source dive series](https://www.youtube.com/watch?v=KkenLT8S9Hs)
